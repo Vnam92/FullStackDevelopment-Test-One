@@ -1,0 +1,376 @@
+html {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: "MyriadProRegular", sans-serif;
+    position: relative;
+    height: auto;
+    min-height: 100% !important;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+p {
+    width: inherit;
+}
+
+/* Wrapper-container
+-----------------------------------------------------------------------------*/
+.wrapper {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+}
+
+.wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Common
+-----------------------------------------------------------------------------*/
+div.headlines {
+    display: inline-block;
+    position: relative;
+    font-family: 'MyriadProBold', sans-serif;
+    text-align: justify;
+    overflow: hidden;
+    height: 82px;
+
+}
+
+.headlines:after {
+    width: 100%;
+    height: 0;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.circle-min-out {
+    border-radius: 50%;
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #6d92c8;
+    display: block;
+    margin-right: 12px;
+}
+
+.circle-min-in {
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4070b7;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.common-text {
+    font-size: 17px;
+}
+
+.image-icon {
+    color: #FFFFFF;
+}
+
+div.logo-text {
+    color: rgb(61, 108, 176);
+    font-weight: bold;
+    font-family: 'MyriadProBold', sans-serif;
+    float: left;
+    font-size: 45.33px;
+    height: 100%;
+    line-height: 82px;
+    margin-right: 12px;
+}
+
+/* Left side
+-----------------------------------------------------------------------------*/
+
+div.left-content-container {
+    display: block;
+    float: left;
+    height: inherit;
+    width: 43%;
+
+}
+
+.left-content-container p {
+    margin: 0.9em 0 2em;
+}
+
+div.left-content {
+    position: relative;
+    padding: 97px 67px;
+}
+
+div.logo {
+    display: inherit;
+    text-align: center;
+    height: 60%;
+    margin-top: 30px
+}
+
+svg.circle-max {
+    border-radius: 50%;
+    width: 252px;
+    height: 252px;
+    border: 2px solid #3d6cb0;
+}
+
+.circle-max-text {
+    padding: 0;
+    margin: 40px 0 100px;
+    line-height: 4em;
+}
+
+.name-here {
+    font-size: 57.54px;
+}
+
+.surname {
+    font-size: 67.99px;
+    font-family: "MyriadProBold";
+}
+
+.graphic-designer {
+    font-size: 27.52px;
+    font-family: "MyriadProBold";
+}
+
+/*Profile*/
+svg.rect-line-profile {
+    height: 100%;
+    line-height: 82px;
+    width: 170px;
+
+}
+
+/*Contact*/
+
+svg.rect-line-contact {
+    height: 100%;
+    line-height: 82px;
+    width: 148px;
+}
+
+div.contact-text {
+    max-width: inherit;
+    display: flex;
+    margin: 0 0 1.5em;
+}
+
+div.contact-text ul {
+
+    list-style-type: none;
+    display: table;
+    font-size: 16.5px;
+    line-height: 2.4em;
+
+}
+
+ul.contact-text-left {
+    position: relative;
+    width: 97px;
+    padding: 0;
+    margin-left: 0;
+    color: #3d6cb0;
+    font-family: 'MyriadProSemiBold', sans-serif;
+
+}
+
+ul.contact-text-right {
+    padding: 0;
+    position: relative;
+    margin-left: 16px;
+    font-family: 'MyriadProRegular', sans-serif;
+    width: 80%;
+}
+
+/*Skills*/
+
+svg.rect-line-skills {
+    height: 100%;
+    line-height: 82px;
+    width: 204px;
+}
+
+.skills-info-container {
+    margin-top: 20px;
+    max-width: inherit;
+    display: block;
+    text-align: center;
+
+}
+
+.skills-info-container > div {
+
+    font-size: 20px;
+    font-family: "MyriadProRegular", sans-serif;
+}
+
+.skills-info-container > div > ul {
+    margin: 0 auto;
+}
+
+ul.skills-list {
+    padding: 10px;
+}
+
+ul.skills-list li {
+    display: inline;
+    margin-right: 5px;
+    color: #3d6cb0;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 1px;
+    list-style-type: none;
+}
+
+.skills-creative li:nth-child(9) ~ li,
+.skills-teamwork li:last-child,
+.skills-innovate li:nth-child(6) ~ li,
+.skills-communication li:last-child {
+    color: #e6e6e6;
+}
+
+/* Right side
+-----------------------------------------------------------------------------*/
+.right-content-container {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    height: inherit;
+    width: 57%;
+
+}
+
+.right-content-container p {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+div.right-content {
+    position: relative;
+    padding: 97px 67px;
+    margin: 0;
+}
+
+/*Education*/
+
+.rect-line-education {
+    height: 100%;
+    line-height: 82px;
+    width: 287px;
+
+}
+
+.star {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.master {
+    font-size: 28.33px;
+    font-family: "MyriadProBold";
+    color: #3d6cb0;
+    margin-right: 20px;
+    padding-bottom: 0;
+
+}
+
+.education-info-container {
+    max-width: inherit;
+    display: flex;
+
+}
+
+ul.education-list {
+    display: table;
+    font-size: 28.33px;
+
+}
+
+.education-info-container ul.education-list li {
+    list-style-image: url(../images/mini_circle.png);
+}
+
+.marker {
+    display: list-item;
+    font-size: 5em;
+
+}
+
+/* Experience */
+
+.rect-line-experience {
+    height: 100%;
+    line-height: 82px;
+    width: 279px;
+
+}
+
+.company {
+    font-size: 28.33px;
+    font-family: "MyriadProBold";
+    margin-right: 20px;
+    padding-bottom: 0;
+
+}
+
+/* Software */
+
+.laptop {
+    color: #FFFFFF;
+}
+
+.software-content {
+    max-width: inherit;
+    display: flex;
+}
+
+.software-content ul {
+    list-style-type: none;
+    display: table;
+    line-height: 1.5em;
+    font-size: 28.33px;
+    font-family: "MyriadProRegular";
+
+}
+
+ul.left-software-content {
+    position: relative;
+    width: 50%;
+    padding: 0;
+}
+
+ul.right-software-content {
+    padding: 0;
+    position: relative;
+    width: 50%;
+}
+
+.software-svg {
+    height: 24px;
+    width: 306px;
+    background-color: #e6e6e6;
+}
+
