@@ -1,5 +1,4 @@
 html {
-  height: 100%;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,6 @@ body {
   font-family: "MyriadProRegular", sans-serif;
   position: relative;
   height: auto;
-  min-height: 100%;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -23,6 +21,7 @@ body {
   width: 100%;
   display: flex;
   overflow: auto;
+  margin-bottom: 5em;
 }
 
 .wrapper:after {
@@ -33,10 +32,10 @@ body {
 
 /* Left side
 -----------------------------------------------------------------------------*/
-
 .left {
   display: block;
   float: left;
+  position: relative;
   height: inherit;
   max-width: 43%;
   margin: 0;
@@ -50,12 +49,6 @@ body {
 .left-content {
   position: relative;
   padding: 97px 67px;
-}
-
-@media screen and (max-width: 700px) {
-  .contact-content table {
-    margin: 0 auto;
-  }
 }
 
 /* Right side
@@ -88,6 +81,7 @@ body {
   display: block;
   float: left;
   position: relative;
+
   &__main-header {
     .logo {
       display: inherit;
@@ -220,7 +214,6 @@ body {
     margin-right: 12px;
   }
 
-  /*Contact*/
   &__contact {
     border-collapse: collapse;
     padding: 10px 0 17px 0;
@@ -250,7 +243,6 @@ body {
     }
   }
 
-  /*Skills*/
   &__skills {
     margin-top: 20px;
     display: block;
@@ -289,7 +281,6 @@ body {
 
   }
 
-  /*Education*/
   &__education {
     display: flex;
     &-list {
@@ -308,7 +299,7 @@ body {
       }
     }
   }
-  /* Experience */
+
   &__experience {
     display: flex;
     &-list {
@@ -327,39 +318,80 @@ body {
     }
   }
 
-  /* Software */
   &__software {
-    display: flex;
-    ul {
-      list-style-type: none;
-      display: table;
+    display: block;
+    position relative;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "MyriadProRegular", sans-serif;
+    .soft {
+      float: left;
+      max-width: 37%;
+      margin-right: 5rem;
       line-height: 1.5em;
       font-size: 1.7rem;
-      font-family: "MyriadProRegular";
-      li {
-        text-transform: uppercase;
+      text-transform: uppercase;
+      &-name {
+        margin: 0 0 7px 0;
+        display: flex;
       }
       .software-svg {
         height: 24px;
         width: 306px;
+        display: flex;
         background-color: #e6e6e6;
       }
-
-    }
-
-    .left-software {
-      position: relative;
-      width: 50%;
-      padding: 0;
-      margin-right: 0.5rem;
-    }
-
-    .right-software {
-      padding: 0;
-      position: relative;
-      width: 50%;
     }
   }
 }
 
+@media screen and (max-width: 700px) {
+
+  .left {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .right {
+    width: 80%;
+  }
+
+  .block__contact .block__contact-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  .block__skills {
+    text-align: center;
+  }
+
+  .left .block__header {
+    width: 100%;
+  }
+
+  .right .block__header {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .left {
+    width: 90%;
+  }
+
+  .right {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .left {
+    max-width: 100%;
+  }
+
+  .right {
+    max-width: 100%;
+  }
+}
 

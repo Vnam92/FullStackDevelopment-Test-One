@@ -1,5 +1,4 @@
 html {
-  height: 100%;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@ body {
   font-family: "MyriadProRegular", sans-serif;
   position: relative;
   height: auto;
-  min-height: 100%;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -21,6 +19,7 @@ body {
   width: 100%;
   display: flex;
   overflow: auto;
+  margin-bottom: 5em;
 }
 .wrapper:after {
   content: "";
@@ -32,6 +31,7 @@ body {
 .left {
   display: block;
   float: left;
+  position: relative;
   height: inherit;
   max-width: 43%;
   margin: 0;
@@ -43,11 +43,6 @@ body {
 .left-content {
   position: relative;
   padding: 97px 67px;
-}
-@media screen and (max-width: 700px) {
-  .contact-content table {
-    margin: 0 auto;
-  }
 }
 /* Right side
 -----------------------------------------------------------------------------*/
@@ -75,11 +70,6 @@ body {
   display: block;
   float: left;
   position: relative;
-/*Contact*/
-/*Skills*/
-/*Education*/
-/* Experience */
-/* Software */
 }
 .block__main-header .logo {
   display: inherit;
@@ -294,31 +284,66 @@ body {
   text-transform: uppercase;
 }
 .block__software {
-  display: flex;
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: "MyriadProRegular", sans-serif;
 }
-.block__software ul {
-  list-style-type: none;
-  display: table;
+.block__software .soft {
+  float: left;
+  max-width: 37%;
+  margin-right: 5rem;
   line-height: 1.5em;
   font-size: 1.7rem;
-  font-family: "MyriadProRegular";
-}
-.block__software ul li {
   text-transform: uppercase;
 }
-.block__software ul .software-svg {
+.block__software .soft-name {
+  margin: 0 0 7px 0;
+  display: flex;
+}
+.block__software .soft .software-svg {
   height: 24px;
   width: 306px;
+  display: flex;
   background-color: #e6e6e6;
 }
-.block__software .left-software {
-  position: relative;
-  width: 50%;
-  padding: 0;
-  margin-right: 0.5rem;
+@media screen and (max-width: 700px) {
+  .left {
+    width: 80%;
+    margin-right: 0;
+  }
+  .right {
+    width: 80%;
+  }
+  .block__contact .block__contact-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  .block__skills {
+    text-align: center;
+  }
+  .left .block__header {
+    width: 100%;
+  }
+  .right .block__header {
+    width: 100%;
+  }
 }
-.block__software .right-software {
-  padding: 0;
-  position: relative;
-  width: 50%;
+@media screen and (max-width: 550px) {
+  .left {
+    width: 90%;
+  }
+  .right {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .left {
+    max-width: 100%;
+  }
+  .right {
+    max-width: 100%;
+  }
 }
