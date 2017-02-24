@@ -19,7 +19,7 @@ body {
   width: 100%;
   display: flex;
   overflow: auto;
-  margin-bottom: 5em;
+  margin: 2rem auto;
 }
 .wrapper:after {
   content: "";
@@ -35,21 +35,18 @@ body {
   height: inherit;
   max-width: 43%;
   margin: 0;
-  padding: 0;
+  padding: 1.8rem;
 }
 .left p {
   margin: 0.9em 0 2em;
 }
-.left-content {
-  position: relative;
-  padding: 97px 67px;
-}
 /* Right side
 -----------------------------------------------------------------------------*/
 .right {
-  margin: 0;
-  padding: 0;
   display: block;
+  margin: 0;
+  padding: 1.8rem;
+  position: relative;
   float: left;
   height: inherit;
   max-width: 57%;
@@ -57,11 +54,6 @@ body {
 .right p {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
-}
-.right-content {
-  position: relative;
-  padding: 97px 67px;
-  margin: 0;
 }
 /* Content
 /*-----------------------------------------------------------------------------*!*/
@@ -109,6 +101,7 @@ body {
   text-align: justify;
   overflow: hidden;
   height: 82px;
+  width: 100%;
 }
 .block__header:after {
   width: 100%;
@@ -150,22 +143,32 @@ body {
 .block__header .rect-line-profile {
   height: 100%;
   line-height: 82px;
-  width: 170px;
+  width: 55%;
 }
 .block__header .rect-line-contact {
   height: 100%;
   line-height: 82px;
-  width: 148px;
+  width: 52%;
 }
 .block__header .rect-line-skills {
   height: 100%;
   line-height: 82px;
-  width: 204px;
+  width: 61%;
+}
+.block__header .rect-line-education {
+  height: 100%;
+  line-height: 82px;
+  width: 51%;
 }
 .block__header .rect-line-experience {
   height: 100%;
   line-height: 82px;
-  width: 279px;
+  width: 50%;
+}
+.block__header .rect-line-software {
+  height: 100%;
+  line-height: 82px;
+  width: 53%;
 }
 .block .common-text {
   font-size: 1rem;
@@ -312,9 +315,10 @@ body {
 @media screen and (max-width: 700px) {
   .left {
     width: 80%;
-    margin-right: 0;
+    float: left;
   }
   .right {
+    float: left;
     width: 80%;
   }
   .block__contact .block__contact-table {
@@ -332,6 +336,9 @@ body {
   }
 }
 @media screen and (max-width: 550px) {
+  .wrapper {
+    display: block;
+  }
   .left {
     width: 90%;
   }
@@ -340,10 +347,15 @@ body {
   }
 }
 @media screen and (max-width: 400px) {
+  .wrapper {
+    display: block;
+  }
   .left {
-    max-width: 100%;
+    width: 50%;
+    float: left;
   }
   .right {
-    max-width: 100%;
+    width: 50%;
+    float: left;
   }
 }
