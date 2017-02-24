@@ -140,35 +140,10 @@ body {
 .block__header .circle-min-in .laptop {
   color: #fff;
 }
-.block__header .rect-line-profile {
-  height: 100%;
-  line-height: 82px;
-  width: 55%;
-}
-.block__header .rect-line-contact {
-  height: 100%;
-  line-height: 82px;
-  width: 52%;
-}
-.block__header .rect-line-skills {
-  height: 100%;
-  line-height: 82px;
-  width: 61%;
-}
-.block__header .rect-line-education {
-  height: 100%;
-  line-height: 82px;
-  width: 51%;
-}
-.block__header .rect-line-experience {
+.block__header .rect-line {
   height: 100%;
   line-height: 82px;
   width: 50%;
-}
-.block__header .rect-line-software {
-  height: 100%;
-  line-height: 82px;
-  width: 53%;
 }
 .block .common-text {
   font-size: 1rem;
