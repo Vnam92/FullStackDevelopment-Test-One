@@ -1,21 +1,17 @@
 'use strict';
 const path = require('path');
+const webpack = require ('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    context: __dirname + "/js",
-    entry: {
-        entry: "./entry",
-    },
+    context: __dirname + '/frontend',
+    entry: './main',
     output: {
-        path: __dirname + "/public",
+        path: __dirname,
         publicPath: '/',
-        filename: "bundle.js"
+        filename: 'bundle.js'
+    },
 
-    },
-    watch: true,
-    watchOptions: {
-        aggregateTimeout: 150
-    },
     module: {
         loaders: [
             {
@@ -24,14 +20,37 @@ module.exports = {
                 loader: "babel-loader"
             },
             {
-                test: /\.css$/,
-                loader: 'style!css'
+                test: /\.pug$/,
+                loader: "pug-loader"
             },
             {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                loaders: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'}
+                ]
+            },
+            {
+                test: /\.styl$/,
+                loaders: [
+                    {loader: 'style-loader'},
+                    {loader: 'css-loader'},
+                    {loader: 'stylus-loader'}
+                ]
+            },
+            {
+                test:   /\.(ico|png|jpg|svg|ttf|eot|woff|woff2)$/,
+                loader: 'file-loader?name=[path][name].[ext]'
             }
         ]
-    }
+    },
+
+    plugins: [
+        new HtmlWebpackPlugin(
+            {
+                filename: 'index.html',
+                template: './layouts/main.pug'
+            })
+    ]
 
 };
